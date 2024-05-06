@@ -563,7 +563,9 @@ span,
         font-size: 55%;
     }
 
-    .exp-container {
+    .exp-container,
+    .project-container,
+    .org-container {
         padding-bottom: 7rem;
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
@@ -592,7 +594,9 @@ span,
         left: 0;
     }
 
-    .experience {
+    .experience,
+    .project,
+    .organization {
         padding-bottom: 7rem;
     }
 
@@ -662,11 +666,15 @@ span,
         width: 56vw;
     }
 
-    .experience h2 {
+    .experience h2,
+    .project h2,
+    .organization h2 {
         margin-bottom: 3rem;
     }
 
-    .exp-container {
+    .exp-container,
+    .project-container,
+    .org-container {
         grid-template-columns: repeat(1,1fr);
     }
 }
