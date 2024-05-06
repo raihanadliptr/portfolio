@@ -575,6 +575,8 @@ span,
 @media(max-width:991px) {
     header {
         padding: 2rem 3%;
+        backdrop-filter: blur(10px);
+        background-color: transparent;
     }
 
     section {
