@@ -391,19 +391,6 @@ span,
     line-height: 22px;
 }
 
-/* ::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);
-    border-radius: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--bg-color);
-} */
-
 .experience,
 .organization {
     background: var(--bg-color);
@@ -488,6 +475,12 @@ span,
 .contact h2 {
     margin-bottom: 3rem;
     color: white;
+}
+
+.contact span {
+    background: linear-gradient(to right, #1383C3 23%, #97EADF 79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact form {
@@ -648,12 +641,16 @@ span,
     }
 
     .home-content h1 { 
-        font-size: 8rem;
+        font-size: 7rem;
         margin-top: 3rem;
     }
 
     .home-content h3 {
         font-size: 2.6rem;
+    }
+
+    .home-content h2 {
+        font-size: 2.5rem;
     }
 
     .home-content p {
@@ -662,7 +659,7 @@ span,
     }
 
     .home-image img {
-        width: 56 vw;
+        width: 56vw;
     }
 
     .experience h2 {
