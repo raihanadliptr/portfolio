@@ -37,3 +37,9 @@ window.addEventListener('scroll', () => {
         header.classList.remove('color-for-contact');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.contact-button').addEventListener('click', function() {
+        window.location.href = '#contact';
+    });
+});
