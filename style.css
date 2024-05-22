@@ -47,7 +47,8 @@ body {
     letter-spacing: -1px;
 }
 
-.header .navbar-menu {
+.header #navbar-menu,
+.header #button-close {
     display: none;
 }
 
@@ -55,16 +56,23 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 56px;
+    gap: 50px;
 }
 
 .header .navbar a {
+    padding: 10px 15px;
     color: #949494;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.8px;
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+
+.header .navbar a:hover {
+    transform: scale(1.05);
 }
 
 .header .navbar a.active {
@@ -668,3 +676,36 @@ body {
     line-height: 150%;
     letter-spacing: -0.8px;
 }
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    .header #navbar-menu,
+    .header #button-close {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header .navbar {
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        transition: 0.3s ease;
+        margin: 24px 0px 16px 0px;
+        text-align: left;
+        gap: 16px;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+
+}
+
+/* @media (max-width: 640px) {
+    
+} */

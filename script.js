@@ -1,3 +1,5 @@
+hamburger = document.querySelector('#navbar-menu');
+
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.navbar a');
