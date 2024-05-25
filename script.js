@@ -1,4 +1,9 @@
-hamburger = document.querySelector('#navbar-menu');
+hamburger = document.querySelector('.navbar-menu');
+
+hamburger.onclick = function() {
+    navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+};
 
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
