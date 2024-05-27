@@ -731,6 +731,7 @@ body {
 
 @media (max-width: 768px) {
     .header {
+        background: rgba(255, 255, 255, 0.80);
         padding: 30px 35px;
     }
 
@@ -749,7 +750,7 @@ body {
         height: 0;
         transition: 0.5s;
         overflow: hidden;
-        background: rgba(255, 255, 255, 0.50);
+        background: rgba(255, 255, 255, 0.80);
         backdrop-filter: blur(4px);
     }
 
@@ -1041,18 +1042,12 @@ body {
         margin-top: 8px;
     }
     
-    .contact .container img {
+    .contact .container img,
+    .contact:hover .container img {
         width: 160px;
         height: 160px;
         bottom: 50px;
         right: -40px;
-    }
-    
-    .contact .container:hover img {
-        width: 160px;
-        height: 160px;
-        bottom: 105px;
-        right: -20px;
     }
     
     .footer {
