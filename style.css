@@ -863,10 +863,20 @@ body {
         gap: 16px;
     }
     
-    .project-box img {
+    .project-box .default {
         width: 353px;
-        height: 265px;
-        border-radius: 12px;
+        height: 90%;
+    }
+    
+    .project-box:hover .default {
+        opacity: 1;
+        display: flex;
+    }
+    
+    .project-box .hovered,
+    .project-box:hover .hovered {
+        opacity: 0;
+        display: none;
     }
     
     .project-box .project-info {
@@ -883,7 +893,11 @@ body {
         letter-spacing: -0.5px;
     }
     
-    .project-box .project-info .project-desc {
+    .project-box .project-info .project-desc-default,
+    .project-box .project-info .project-desc-hovered,
+    .project-box:hover .project-info .project-desc-default,
+    .project-box:hover .project-info .project-desc-hovered {
+        display: flex;
         font-size: 10px;
         letter-spacing: -0.5px;
     }
