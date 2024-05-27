@@ -6,6 +6,7 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: "Inter";
+    box-sizing: border-box;
 }
 
 :root {
@@ -24,17 +25,17 @@ body {
 }
 
 .header {
-    display: flex;
     position: fixed;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     height: 35px;
-    background: rgba(255, 255, 255, 0.50);
-    backdrop-filter: blur(4px);
-    padding: 24px 80px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(4px);
+    padding: 30px 80px;
     z-index: 5;
 }
 
@@ -47,8 +48,7 @@ body {
     letter-spacing: -1px;
 }
 
-.header .navbar-menu,
-.header .button-close {
+.header .hamburger {
     display: none;
 }
 
@@ -57,22 +57,19 @@ body {
     flex-direction: row;
     align-items: flex-start;
     gap: 50px;
+    list-style-type: none;
 }
 
 .header .navbar a {
-    padding: 10px 15px;
     color: #949494;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.8px;
+    padding: 10px 15px;
     transition: 0.3s ease;
     margin: 0 5px;
-}
-
-.header .navbar a:hover {
-    transform: scale(1.05);
 }
 
 .header .navbar a.active {
@@ -271,14 +268,40 @@ body {
     gap: 32px;
 }
 
-.project-box img {
+.project-box .default {
     width: 552px;
-    height: 415px;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 24px;
+    border: 15px solid #EDEFF1;
     background: white;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.project-box:hover .default {
+    opacity: 0;
+    display: none;
+}
+
+.project-box .hovered {
+    width: 552px;
+    height: 90%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    border: 15px solid #EDEFF1;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.project-box:hover .hovered {
+    opacity: 1;
+    display: flex;
 }
 
 .project-box .project-info {
@@ -318,13 +341,32 @@ body {
     height: 4px;
 }
 
-.project-box .project-info .project-desc {
+.project-box .project-info .project-desc-default {
+    display: flex;
     color: var(--second-text-color);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: -0.8px;
+    letter-spacing: -1px;
+}
+
+.project-box:hover .project-info .project-desc-default {
+    display: none;
+}
+
+.project-box .project-info .project-desc-hovered {
+    display: none;
+    color: var(--second-text-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -1px;
+}
+
+.project-box:hover .project-info .project-desc-hovered {
+    display: flex;
 }
 
 .about-me {
@@ -493,6 +535,7 @@ body {
 
 .exp-box .job-desc {
     display: none;
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
@@ -544,15 +587,16 @@ body {
 
 .contact {
     display: flex;
-    position: relative;
     padding: 80px 120px 56px 120px;
     align-items: center;
     background: white;
+    overflow-x: hidden;
 }
 
 .contact .container {
-    gap: 296px;
+    position: relative;
     display: flex;
+    gap: 296px;
     flex-direction: row;
     padding: 56px;
     justify-content: space-between;
@@ -593,7 +637,7 @@ body {
     letter-spacing: -0.5px;
 }
 
-.contact .container button {
+.contact .container a {
     display: flex;
     width: 237px;
     height: 51px;
@@ -610,21 +654,23 @@ body {
     font-weight: 600;
     line-height: normal;
     letter-spacing: -0.8px;
+    z-index: 10;
 }
 
 .contact .container img {
     width: 313px;
     height: 313px;
     position: absolute;
-    bottom: 60px;
-    right: 110px;
+    bottom: 10px;
+    right: -10px;
     transition: width 0.3s ease, height 0.3s ease, bottom 0.3s ease;
+    z-index: 0;
 }
 
 .contact .container:hover img {
     width: 359px;
     height: 359px;
-    bottom: 20px;
+    bottom: -40px;
 }
 
 .footer {
@@ -684,34 +730,56 @@ body {
 } */
 
 @media (max-width: 768px) {
-    .header .navbar-menu,
-    .header .button-close {
+    .header {
+        padding: 30px 35px;
+    }
+
+    .header .hamburger {
         display: block;
         cursor: pointer;
     }
 
-    .header .navbar {
-        width: 100vw;
-        flex-direction: column;
+    .header .nav-bar {
         position: absolute;
-        top: 80px;
+        position: absolute;
+        top: 60px;
         left: 0;
-        transition: 0.3s ease;
-        margin: 24px 0px 16px 0px;
-        text-align: left;
-        gap: 16px;
-        opacity: 0;
+        right: 0;
+        width: 100%;
+        height: 0;
+        transition: 0.5s;
         overflow: hidden;
+        background: rgba(255, 255, 255, 0.50);
+        backdrop-filter: blur(4px);
     }
 
-    .header .navbar.active {
+    .header .nav-bar.active {
         height: auto;
-        background: #1B1B1B;
+    }
+
+    .header .navbar {
+        display: flex;
+        width: 100%;
+        margin: 0px 20px 16px 16px;
+        text-align: left;
+        transition: 0.3s ease;
+        flex-direction: column;
+        gap: 16px;
+        opacity: 0;    }
+
+    .header .navbar a {
+        color: var(--text-color);
+        font-size: 10px;
+        letter-spacing: -0.5px;
+    }
+
+    .header .nav-bar.active .navbar {
+        opacity: 1;
     }
 
     .home {
         width: 100%;
-        padding: 56px 20px;
+        padding: 106px 20px 56px 20px;
     }
     
     .status-bubble p {
@@ -723,6 +791,11 @@ body {
         width: 56px;
         height: 56px;
         border: 2px solid white;
+        transition: none;
+    }
+
+    .home img:hover {
+        box-shadow: none;
     }
     
     .home h3 {
@@ -836,11 +909,6 @@ body {
         box-shadow: 4px 4px 24px 0px rgba(178, 178, 178, 0.15);
         border-radius: 50%;
         border: 10px solid white;
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-    
-    .about-me .container .mobile-image:hover {
-        box-shadow: 4px 4px 24px 0px rgba(32, 32, 32, 0.15);
     }
     
     .about-me .container .content .title {
@@ -950,7 +1018,7 @@ body {
         letter-spacing: -0.5px;
     }
     
-    .contact .container button {
+    .contact .container a {
         width: 305px;
         height: 36px;
         padding: 12px 56px;
@@ -962,8 +1030,8 @@ body {
     .contact .container img {
         width: 160px;
         height: 160px;
-        bottom: 105px;
-        right: -20px;
+        bottom: 50px;
+        right: -40px;
     }
     
     .contact .container:hover img {

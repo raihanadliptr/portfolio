@@ -1,9 +1,11 @@
-hamburger = document.querySelector('.navbar-menu');
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navBar = document.querySelector('.nav-bar');
 
-hamburger.onclick = function() {
-    navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-};
+    hamburger.addEventListener('click', function() {
+        navBar.classList.toggle('active');
+    });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
@@ -27,5 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('active');
             }
         });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    function toggleJobDesc(event) {
+        const box = event.currentTarget;
+        box.classList.toggle('expanded');
+    }
+
+    const boxes = document.querySelectorAll('.experience .exp-container .exp-box');
+    boxes.forEach(function(box) {
+        box.addEventListener('click', toggleJobDesc);
     });
 });

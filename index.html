@@ -15,14 +15,15 @@
     <body>
         <header class="header">
             <div class="logo-name">Raihan Adliputra</div>
-            <i class="fa-solid fa-bars navbar-menu"></i>
-            <ul class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#project">Project</a>
-                <a href="#about-me">About Me</a>
-                <a href="#experience">Experience</a>
-            </ul>
-            <i class="fa-solid fa-xmark button-close"></i>
+            <i class="fa-solid fa-bars hamburger"></i>
+            <nav class="nav-bar">
+                <ul class="navbar">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+            </nav>
         </header>
 
         <section class="home" id="home">
@@ -39,12 +40,12 @@
             <h1>I'm a
                 <span>Frontend Developer</span>
             </h1>
-            <p class="personal-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis. Mauris facilisis turpis egestas, luctus velit a, commodo turpis. Etiam vehicula, eros eu ornare tincidunt, dui urna dictum sapien, ut pellentesque neque nisl a augue. Maecenas porttitor dolor sed justo viverra, et pellentesque turpis placerat.</p>
+            <p class="personal-desc">Welcome to my portfolio! My name is Muhammad Raihan Adliputra, a passionate Frontend Developer with experience in creating dynamic and responsive web applications. Explore my projects and experiences to learn more about my journey and skills.</p>
             <div class="social-icons">
                 <a class="instagram" href="https://www.instagram.com/raihanadliptr/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
                 <a class="linkedin" href="https://www.linkedin.com/in/raihan-adliputra/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
                 <a class="github" href="https://github.com/raihanadliptr" target="_blank"><i class='bx bxl-github'></i></a>
-                <a class="cv" href="https://drive.google.com/file/d/1yzjrTnlzXZn2eieFeokAngfjXAs9oT6w/view?usp=sharing" target="_blank"><i class='bx bxs-file-pdf' ></i></a>
+                <a class="cv" href="https://drive.google.com/file/d/1UPyQUSx1P14b5HdEyS-LTxsBZMYyrux1/view?usp=sharing" target="_blank"><i class='bx bxs-file-pdf' ></i></a>
             </div>
             <a href="#contact" class="contact-button">Contact</a>
         </section>
@@ -53,59 +54,67 @@
             <h2 class="heading">Featured Projects</h2>
             <div class="project-container">
                 <div class="project-box">
-                    <img src="assets/2nd-project-img.png" alt="1st Project Image">
+                    <img class="default" src="assets/plabs-project.png" alt="Default Project Image">
+                    <img class="hovered" src="assets/proyekstory-project.png" alt="Hovered Project Image">
                     <div class="project-info">
-                        <h3>Fitness Dashboard Development</h3>
+                        <h3>BeltTrackr</h3>
                         <div class="position">
-                            <p>Web Developer</p>
+                            <p>Android Developer</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
                                 <circle cx="2" cy="2" r="2" fill="#D9D9D9"/>
                             </svg>
-                            <p>2024</p>
+                            <p>2023</p>
                         </div>
-                        <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis. Mauris facilisis turpis egestas, luctus velit a, commodo turpis.</p>
+                        <p class="project-desc-default">The BeltTrackr application is designed to count the number of products moving in, out, and rejected on a conveyor belt, catering to manufacturing needs.</p>
+                        <p class="project-desc-hovered">Its primary goal is to address the demand for highly customizable and scalable systems and sensors for object detection used by our client, Evomo.</p>
                     </div>
                 </div>
                 <div class="project-box">
-                    <img src="assets/3rd-project-img.png" alt="1st Project Image">
+                    <img class="default" src="assets/plabs-project.png" alt="Default Project Image">
+                    <img class="hovered" src="assets/proyekstory-project.png" alt="Hovered Project Image">
                     <div class="project-info">
-                        <h3>Fitness Dashboard Development</h3>
+                        <h3>Github User Explorer</h3>
                         <div class="position">
-                            <p>Web Developer</p>
+                            <p>Android Developer</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
                                 <circle cx="2" cy="2" r="2" fill="#D9D9D9"/>
                             </svg>
-                            <p>2024</p>
+                            <p>2023</p>
                         </div>
-                        <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis. Mauris facilisis turpis egestas, luctus velit a, commodo turpis.</p>
+                        <p class="project-desc-default">The GitHub Users Explorer application is an Android app developed as the final project for the "Belajar Fundamental Aplikasi Android" course on Dicoding.</p>
+                        <p class="project-desc-hovered">Built with Kotlin, this app utilizes the GitHub API to enable users to explore and view GitHub profiles. This project demonstrates Android development fundamentals, API integration, and Kotlin programming.</p>
                     </div>
                 </div>
                 <div class="project-box">
-                    <img src="assets/2nd-project-img.png" alt="1st Project Image">
+                    <img class="default" src="assets/plabs-project.png" alt="Default Project Image">
+                    <img class="hovered" src="assets/proyekstory-project.png" alt="Hovered Project Image">
                     <div class="project-info">
-                        <h3>Fitness Dashboard Development</h3>
+                        <h3>Proyek Story</h3>
                         <div class="position">
-                            <p>Web Developer</p>
+                            <p>Android Developer</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
                                 <circle cx="2" cy="2" r="2" fill="#D9D9D9"/>
                             </svg>
-                            <p>2024</p>
+                            <p>2023</p>
                         </div>
-                        <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis. Mauris facilisis turpis egestas, luctus velit a, commodo turpis.</p>
+                        <p class="project-desc-default">The Proyek Story application is an Android app developed as the final project for the "Belajar Pengembangan Aplikasi Android Intermediate" course on Dicoding.</p>
+                        <p class="project-desc-hovered">This app showcases my Android development skills, incorporating features such as user authentication, story creation, and integration of location services. The project highlights my ability to design and implement mobile applications, ensuring a seamless and user-friendly experience.</p>
                     </div>
                 </div>
                 <div class="project-box">
-                    <img src="assets/2nd-project-img.png" alt="1st Project Image">
+                    <img class="default" src="assets/plabs-project.png" alt="Default Project Image">
+                    <img class="hovered" src="assets/proyekstory-project.png" alt="Hovered Project Image">
                     <div class="project-info">
-                        <h3>Fitness Dashboard Development</h3>
+                        <h3>Emplova</h3>
                         <div class="position">
-                            <p>Web Developer</p>
+                            <p>Frontend Developer</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
                                 <circle cx="2" cy="2" r="2" fill="#D9D9D9"/>
                             </svg>
                             <p>2024</p>
                         </div>
-                        <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis. Mauris facilisis turpis egestas, luctus velit a, commodo turpis.</p>
+                        <p class="project-desc-default">As the Frontend Developer for the PLABS.id application, I was responsible for transforming designs into a fully functional, user-friendly website. Additionally, in my role as Scrum Master, I facilitated daily stand-ups, sprint planning, retrospectives, and sprint reviews, ensuring effective communication and swiftly resolving impediments to maximize team productivity.</p>
+                        <p class="project-desc-hovered">The application offers features such as attendance management, location-based absence tracking, payroll management, salary slip generation, activity reports, and more.</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +128,7 @@
                     <h3 class="title">Hello! I'm
                         <span>Raihan</span>
                     </h3>
-                    <p class="personal-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis. Mauris facilisis turpis egestas, luctus velit a, commodo turpis. Etiam vehicula, eros eu ornare tincidunt, dui urna dictum sapien, ut pellentesque neque nisl a augue. Maecenas porttitor dolor sed justo viverra, et pellentesque turpis placerat.</p>
+                    <p class="personal-desc">As a student at the University of Indonesia pursuing a Bachelor of Science in Information Systems, I am actively developing a robust skill set across programming, project management, and user experience design. My passion lies in leveraging technology to solve real-world problems and enhance the digital landscape.</p>
                     <div class="accomplishment">
                         <div class="box">
                             <h3>10+</h3>
@@ -147,35 +156,35 @@
                 <div class="exp-box">
                     <div class="placement">
                         <img src="assets/crht-logo.png" alt="Company Logo">
-                        <p>2017-2020</p>
+                        <p>Dec 2023 - Present</p>
                     </div>    
                     <div class="job">
                         <h3>Frontend Developer</h3>
                         <p>Crescent Rating & Halal Trip</p>
                     </div>
-                    <p class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis.</p>
+                    <p class="job-desc">CrescentRating is the world's leading authority on halal-friendly travel. I led the full-cycle development of a digital platform for restaurant ratings and awards, enhancing user experience and system functionality. Throughout the project, I transformed conceptual designs into a fully responsive website using PHP, CSS, and JavaScript, ensuring cross-browser compatibility.</p>
                 </div>    
                 <div class="exp-box">
                     <div class="placement">
                         <img src="assets/crht-logo.png" alt="Company Logo">
-                        <p>2017-2020</p>
+                        <p>Aug - Dec, 2023</p>
                     </div>    
                     <div class="job">
-                        <h3>Frontend Developer</h3>
+                        <h3>Frontend Developer Intern</h3>
                         <p>Crescent Rating & Halal Trip</p>
                     </div>
-                    <p class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis.</p>
+                    <p class="job-desc">CrescentRating is the world's leading authority on halal-friendly travel. I led the full-cycle development of a digital platform for restaurant ratings and awards, enhancing user experience and system functionality. Throughout the project, I transformed conceptual designs into a fully responsive website using PHP, CSS, and JavaScript, ensuring cross-browser compatibility.</p>
                 </div>    
                 <div class="exp-box">
                     <div class="placement">
-                        <img src="assets/crht-logo.png" alt="Company Logo">
-                        <p>2017-2020</p>
+                        <img src="assets/bangkit-logo.png" alt="Company Logo">
+                        <p>Feb - Jul, 2023</p>
                     </div>    
                     <div class="job">
-                        <h3>Frontend Developer</h3>
-                        <p>Crescent Rating & Halal Trip</p>
+                        <h3>Android Developer</h3>
+                        <p>Bangkit Academy 2023</p>
                     </div>
-                    <p class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at suscipit enim, in interdum turpis.</p>
+                    <p class="job-desc">Bangkit Academy, a rigorous technology and professional development program sponsored by Google, GoTo, and Traveloka, is designed to prepare participants for success in the tech industry. My team was honored as part of the Best Team in the Bangkit Company Capstone Project, in partnership with Evomo, and recognized among the top 1000 performers in English courses and assessments.</p>
                 </div>    
             </div>    
         </section>    
@@ -186,7 +195,9 @@
                     <h3>Let's Get in Touch!</h3>
                     <p>If you have any questions, comments, or just want to get in touch, please feel free to contact me.</p>
                 </div>
-                <button>Contact Me</button>
+                <a href="mailto:raihanadliptr@gmail.com?subject=Contact%20Request&body=Dear%20Raihan%20Adliputra%2C%0D%0A%0D%0AI%20hope%20this%20message%20finds%20you%20well.%20I%20have%20a%20few%20questions%20and%20comments%20that%20I'd%20like%20to%20discuss%20with%20you.%20Please%20let%20me%20know%20a%20convenient%20time%20to%20connect.%0D%0A%0D%0ALooking%20forward%20to%20your%20response.%0D%0A%0D%0ABest%20regards%2C%0D%0A%0D%0A%5BYour%20Name%5D">
+                    Contact Me
+                </a>
                 <img src="assets/message-icon.png" alt="Message Icon">
             </div>            
         </section>
